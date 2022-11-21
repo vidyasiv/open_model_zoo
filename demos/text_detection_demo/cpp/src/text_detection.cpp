@@ -277,6 +277,9 @@ std::vector<cv::RotatedRect> TextDetector::postProcess(
             }
         }
 
+	kLocOutputName = "boxes";
+        kClsOutputName = "labels";
+
         if (kLocOutputName.empty())
             throw std::runtime_error("Failed to determine output blob names");
 
