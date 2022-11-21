@@ -277,7 +277,8 @@ std::vector<cv::RotatedRect> TextDetector::postProcess(
             }
         }
 
-	kLocOutputName = "boxes";
+        // Addition to support horizontal-text-detection-0002
+	    kLocOutputName = "boxes";
         kClsOutputName = "labels";
 
         if (kLocOutputName.empty())
